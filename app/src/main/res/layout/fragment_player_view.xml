@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimary"
+    tools:context=".PlayerViewFragment">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/playerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/playerWindow"
+            android:layout_width="371dp"
+            android:layout_height="484dp"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:contentDescription="@string/player_window_content_desc"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/player_window" />
+
+        <ImageView
+            android:id="@+id/infoWindow"
+            android:layout_width="171dp"
+            android:layout_height="64dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="1dp"
+            android:contentDescription="@string/info_window_content_desc"
+            app:layout_constraintBottom_toBottomOf="@+id/playerWindow"
+            app:layout_constraintEnd_toEndOf="@+id/playerWindow"
+            app:layout_constraintStart_toEndOf="@+id/skipButton"
+            app:srcCompat="@android:color/black" />
+
+        <TextView
+            android:id="@+id/titleLabel"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="monospace"
+            android:text="@string/title_label"
+            android:textColor="@android:color/background_light"
+            app:layout_constraintStart_toStartOf="@+id/infoWindow"
+            app:layout_constraintTop_toTopOf="@+id/infoWindow" />
+
+        <TextView
+            android:id="@+id/albumLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="1dp"
+            android:fontFamily="monospace"
+            android:text="@string/album_label"
+            android:textColor="@android:color/background_light"
+            app:layout_constraintStart_toStartOf="@+id/infoWindow"
+            app:layout_constraintTop_toBottomOf="@+id/titleLabel" />
+
+        <ImageView
+            android:id="@+id/playButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="@+id/playerWindow"
+            app:layout_constraintStart_toStartOf="@+id/playerWindow"
+            app:srcCompat="@drawable/play_selector"
+            android:contentDescription="@string/play_button_content_desc" />
+
+        <ImageView
+            android:id="@+id/skipButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="@+id/playerWindow"
+            app:layout_constraintStart_toEndOf="@+id/backButton"
+            app:srcCompat="@drawable/skip_selector"
+            android:contentDescription="@string/skip_button_content_desc" />
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="@+id/playerWindow"
+            app:layout_constraintStart_toEndOf="@+id/playButton"
+            app:srcCompat="@drawable/back_selector"
+            android:contentDescription="@string/back_button_content_desc" />
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:scrollHorizontally="true"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="monospace"
+            android:textColor="@android:color/background_light"
+            app:layout_constraintStart_toEndOf="@+id/titleLabel"
+            app:layout_constraintTop_toTopOf="@+id/infoWindow" />
+
+        <TextView
+            android:id="@+id/albumText"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:scrollHorizontally="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:fontFamily="monospace"
+            android:textColor="@android:color/background_light"
+            app:layout_constraintStart_toEndOf="@+id/albumLabel"
+            app:layout_constraintTop_toBottomOf="@+id/titleText" />
+
+        <ImageView
+            android:id="@+id/albumArt"
+            android:layout_width="331dp"
+            android:layout_height="325dp"
+            app:layout_constraintBottom_toBottomOf="@+id/playerWindow"
+            app:layout_constraintEnd_toEndOf="@+id/playerWindow"
+            app:layout_constraintStart_toStartOf="@+id/playerWindow"
+            app:layout_constraintTop_toTopOf="@+id/playerWindow"
+            app:layout_constraintVertical_bias="0.276"
+            app:srcCompat="@android:color/background_dark"
+            android:contentDescription="@string/albumArt_content_desc" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <!--</LinearLayout>-->
+</FrameLayout>

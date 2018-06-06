@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">HomeAndOffice</string>
+    <string name="albumsJsonPath">http://addyt.hopto.org/albums.json</string>
+
+    <string name="bg_text">Home&amp;Office</string>
+    <string name="player_window_content_desc">Player Window</string>
+    <string name="play_button_content_desc">Play Button</string>
+    <string name="info_window_content_desc">Info window</string>
+    <string name="skip_button_content_desc">Skip Button</string>
+    <string name="back_button_content_desc">Back Button</string>
+    <string name="CHANNEL_ID">MediaPlayer</string>
+    <string name="pause">Pause</string>
+    <string name="channel_name">Media Player</string>
+    <string name="channel_description">It\'s the media player</string>
+    <string name="album_label">Album:</string>
+    <string name="title_label">Title:</string>
+    <string name="albumArt_content_desc">Album Art</string>
+    <string name="select_album">Select Album</string>
+    <string name="album_info">Album Info</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="info_art_content_desc">Album Art</string>
+    <string name="recycler_art_content_desc">Album Art</string>
+</resources>
