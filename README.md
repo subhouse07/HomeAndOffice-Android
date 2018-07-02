@@ -1,4 +1,5 @@
 # HomeAndOffice-Android
+<img src="https://i.imgur.com/Rag4PM7.png" width="40%" height="40%">
 
 ## Intro
 
